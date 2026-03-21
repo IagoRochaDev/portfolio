@@ -1,6 +1,6 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { techCategories } from "@/data/portfolio-data";
-import { Code2, Smartphone, Layers, Database, GitBranch, Globe, Cpu, Zap } from "lucide-react";
+import { Code2, Smartphone, Layers, Database, GitBranch, Globe, Cpu, Zap, Server } from "lucide-react";
 
 const skillGroups = [
   {
@@ -11,7 +11,7 @@ const skillGroups = [
   {
     category: "ui",
     icon: Smartphone,
-    items: ["Jetpack Compose", "XML Layouts", "Material Design"],
+    items: ["Jetpack Compose", "XML Layouts", "Blade", "Material Design"],
   },
   {
     category: "architecture",
@@ -27,6 +27,11 @@ const skillGroups = [
     category: "di",
     icon: Zap,
     items: ["Hilt", "Dagger"],
+  },
+  {
+    category: "backend",
+    icon: Server,
+    items: ["Laravel", "Firebase"],
   },
   {
     category: "database",
@@ -47,7 +52,6 @@ const skillGroups = [
 
 const categoryLabels: Record<string, string> = {
   ...techCategories,
-  database: "Banco de Dados",
 };
 
 export default function SkillsSection() {

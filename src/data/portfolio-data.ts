@@ -18,6 +18,10 @@ export interface Project {
 import gymappDark from "@/assets/gymapp-dark.png";
 import gymappLight from "@/assets/gymapp-light.png";
 import gymappDetailDark from "@/assets/gymapp-detail-dark.png";
+import recipeappHome from "@/assets/recipeapp-home.png";
+import recipeappSearch from "@/assets/recipeapp-search.png";
+import recipeappDetail from "@/assets/recipeapp-detail.png";
+import recipeappFavorites from "@/assets/recipeapp-favorites.png";
 
 export const projects: Project[] = [
   {
@@ -103,27 +107,40 @@ export const projects: Project[] = [
       "Testes unitários com JUnit e MockK para regras de negócio",
       "Cache de imagens com Coil",
     ],
-    screenshots: [],
+    screenshots: [
+      { src: recipeappHome, alt: "RecipeApp — Tela inicial com receita do dia" },
+      { src: recipeappSearch, alt: "RecipeApp — Busca inteligente por categoria" },
+      { src: recipeappDetail, alt: "RecipeApp — Detalhes da receita com ingredientes" },
+      { src: recipeappFavorites, alt: "RecipeApp — Tela de favoritos" },
+    ],
   },
 ];
 
 export const skills = [
-  { name: "Kotlin", category: "language", level: 95 },
-  { name: "Java", category: "language", level: 80 },
-  { name: "Jetpack Compose", category: "ui", level: 90 },
-  { name: "XML Layouts", category: "ui", level: 85 },
-  { name: "MVVM", category: "architecture", level: 95 },
-  { name: "Clean Architecture", category: "architecture", level: 90 },
-  { name: "Room", category: "jetpack", level: 90 },
-  { name: "Navigation", category: "jetpack", level: 88 },
-  { name: "ViewModel", category: "jetpack", level: 95 },
-  { name: "LiveData / Flow", category: "jetpack", level: 90 },
-  { name: "Hilt", category: "di", level: 88 },
-  { name: "Dagger", category: "di", level: 80 },
-  { name: "Coroutines", category: "async", level: 92 },
-  { name: "Retrofit", category: "network", level: 90 },
-  { name: "Git", category: "tools", level: 90 },
-  { name: "CI/CD", category: "tools", level: 78 },
+  { name: "Kotlin", category: "language" },
+  { name: "Java", category: "language" },
+  { name: "PHP", category: "language" },
+  { name: "Python", category: "language" },
+  { name: "Jetpack Compose", category: "ui" },
+  { name: "XML Layouts", category: "ui" },
+  { name: "Blade", category: "ui" },
+  { name: "MVVM", category: "architecture" },
+  { name: "Clean Architecture", category: "architecture" },
+  { name: "Repository Pattern", category: "architecture" },
+  { name: "Room", category: "jetpack" },
+  { name: "Navigation", category: "jetpack" },
+  { name: "ViewModel", category: "jetpack" },
+  { name: "LiveData / Flow", category: "jetpack" },
+  { name: "Hilt", category: "di" },
+  { name: "Dagger", category: "di" },
+  { name: "Coroutines", category: "async" },
+  { name: "Retrofit", category: "network" },
+  { name: "Firebase", category: "backend" },
+  { name: "Laravel", category: "backend" },
+  { name: "PostgreSQL", category: "database" },
+  { name: "MySQL", category: "database" },
+  { name: "Git", category: "tools" },
+  { name: "CI/CD", category: "tools" },
 ];
 
 export const techCategories: Record<string, string> = {
@@ -134,5 +151,7 @@ export const techCategories: Record<string, string> = {
   di: "Injeção de Dependência",
   async: "Assíncrono",
   network: "Network",
+  backend: "Backend",
+  database: "Banco de Dados",
   tools: "Ferramentas",
 };
