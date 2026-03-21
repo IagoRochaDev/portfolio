@@ -24,7 +24,11 @@ export default function ProjectsSection() {
   const selected = projects.find((p) => p.id === selectedProject);
 
   if (selected) {
-    return <ProjectDetail project={selected} onBack={() => setSelectedProject(null)} />;
+    return (
+      <div id="projects">
+        <ProjectDetail project={selected} onBack={() => setSelectedProject(null)} />
+      </div>
+    );
   }
 
   return (
