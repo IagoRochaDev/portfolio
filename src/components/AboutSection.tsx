@@ -35,7 +35,7 @@ const timeline = [
     icon: Briefcase,
     title: "Desenvolvedor Backend (PHP) — Estágio",
     place: "NDTI – IFNMG | Campus Montes Claros",
-    period: "2024–atual",
+    period: "2024–2025",
   },
   {
     icon: GraduationCap,
