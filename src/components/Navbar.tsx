@@ -45,11 +45,10 @@ export default function Navbar() {
           className="font-mono text-lg font-semibold tracking-tight text-foreground"
         >
           <span className="text-primary">{"<"}</span>
-          Dev
+          Iago
           <span className="text-primary">{"/>"}</span>
         </button>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <button
@@ -70,13 +69,12 @@ export default function Navbar() {
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/IagoRochaDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github size={18} />
             </a>
           </Button>
         </div>
 
-        {/* Mobile toggle */}
         <div className="flex md:hidden items-center gap-1">
           <Button variant="ghost" size="icon" onClick={() => setIsDark(!isDark)}>
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -87,7 +85,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden surface-elevated border-t border-border animate-fade-in">
           <div className="container py-4 flex flex-col gap-1">
