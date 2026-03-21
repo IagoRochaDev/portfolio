@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <p className="font-mono text-xs">
           <span className="text-primary">{"<"}</span>
-          Dev
+          Iago
           <span className="text-primary">{"/>"}</span>
           {" "}© {new Date().getFullYear()}
         </p>

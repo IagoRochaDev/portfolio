@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { Code2, Layers, Smartphone, Zap } from "lucide-react";
+import { Code2, Layers, Smartphone, Zap, GraduationCap, Briefcase } from "lucide-react";
 
 const principles = [
   {
@@ -24,6 +24,27 @@ const principles = [
   },
 ];
 
+const timeline = [
+  {
+    icon: GraduationCap,
+    title: "Bacharelado em Ciência da Computação",
+    place: "IFNMG — Campus Montes Claros",
+    period: "2023–2027",
+  },
+  {
+    icon: Briefcase,
+    title: "Desenvolvedor Backend (PHP) — Estágio",
+    place: "NDTI – IFNMG | Campus Montes Claros",
+    period: "2024–atual",
+  },
+  {
+    icon: GraduationCap,
+    title: "Técnico em Informática",
+    place: "E. E. Benício Prates (Pronatec)",
+    period: "2016–2018",
+  },
+];
+
 export default function AboutSection() {
   const { ref, isVisible } = useScrollReveal();
 
@@ -38,13 +59,15 @@ export default function AboutSection() {
             Abordagem de desenvolvimento
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Com anos de experiência em desenvolvimento Android nativo, foco em criar
-            aplicações robustas, testáveis e escaláveis. Cada projeto segue princípios
-            sólidos de engenharia de software.
+            Sou estudante de Ciência da Computação no IFNMG, com formação técnica em
+            Informática. Atuo como Desenvolvedor Backend no NDTI do IFNMG, desenvolvendo
+            módulos para sistemas internos e contribuindo com a digitalização de processos
+            acadêmicos. Busco aprendizado contínuo e oportunidades para evoluir tecnicamente.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Principles */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {principles.map((item, i) => {
             const Icon = item.icon;
             return (
@@ -54,7 +77,7 @@ export default function AboutSection() {
                   isVisible ? `animate-reveal-up delay-${(i + 1) * 100}` : "opacity-0"
                 }`}
               >
-                <div className="w-10 h-10 rounded-lg android-green-bg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-lg kotlin-blue-bg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
                   <Icon size={20} className="text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
@@ -62,6 +85,33 @@ export default function AboutSection() {
               </div>
             );
           })}
+        </div>
+
+        {/* Timeline */}
+        <div className={`max-w-2xl ${isVisible ? "animate-reveal-up delay-500" : "opacity-0"}`}>
+          <h3 className="text-xs font-mono font-semibold text-primary uppercase tracking-wider mb-6">
+            Formação & Experiência
+          </h3>
+          <div className="space-y-4">
+            {timeline.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="flex gap-4 p-4 rounded-xl bg-card border border-border"
+                >
+                  <div className="w-9 h-9 rounded-lg kotlin-blue-bg flex items-center justify-center flex-shrink-0">
+                    <Icon size={16} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground">{item.place}</p>
+                    <p className="text-xs font-mono text-muted-foreground mt-1">{item.period}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

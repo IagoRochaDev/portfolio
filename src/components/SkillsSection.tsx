@@ -1,14 +1,57 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { skills, techCategories } from "@/data/portfolio-data";
+import { techCategories } from "@/data/portfolio-data";
+import { Code2, Smartphone, Layers, Database, GitBranch, Globe, Cpu, Zap } from "lucide-react";
+
+const skillGroups = [
+  {
+    category: "language",
+    icon: Code2,
+    items: ["Kotlin", "Java", "PHP", "Python", "JavaScript"],
+  },
+  {
+    category: "ui",
+    icon: Smartphone,
+    items: ["Jetpack Compose", "XML Layouts", "Material Design"],
+  },
+  {
+    category: "architecture",
+    icon: Layers,
+    items: ["MVVM", "Clean Architecture", "Repository Pattern"],
+  },
+  {
+    category: "jetpack",
+    icon: Cpu,
+    items: ["Room", "Navigation", "ViewModel", "LiveData / Flow", "WorkManager"],
+  },
+  {
+    category: "di",
+    icon: Zap,
+    items: ["Hilt", "Dagger"],
+  },
+  {
+    category: "database",
+    icon: Database,
+    items: ["PostgreSQL", "MySQL", "Room (SQLite)"],
+  },
+  {
+    category: "network",
+    icon: Globe,
+    items: ["Retrofit", "REST APIs"],
+  },
+  {
+    category: "tools",
+    icon: GitBranch,
+    items: ["Git", "CI/CD", "GitHub"],
+  },
+];
+
+const categoryLabels: Record<string, string> = {
+  ...techCategories,
+  database: "Banco de Dados",
+};
 
 export default function SkillsSection() {
   const { ref, isVisible } = useScrollReveal();
-
-  const grouped = skills.reduce<Record<string, typeof skills>>((acc, skill) => {
-    if (!acc[skill.category]) acc[skill.category] = [];
-    acc[skill.category].push(skill);
-    return acc;
-  }, {});
 
   return (
     <section id="skills" className="py-24 lg:py-32" ref={ref}>
@@ -21,41 +64,41 @@ export default function SkillsSection() {
             Stack técnica
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Tecnologias e ferramentas que domino no ecossistema Android.
+            Tecnologias e ferramentas que utilizo no desenvolvimento de software.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Object.entries(grouped).map(([category, items], i) => (
-            <div
-              key={category}
-              className={`${isVisible ? `animate-reveal-up delay-${Math.min((i + 1) * 100, 500)}` : "opacity-0"}`}
-            >
-              <h3 className="text-xs font-mono font-semibold text-primary uppercase tracking-wider mb-4">
-                {techCategories[category] || category}
-              </h3>
-              <div className="space-y-3">
-                {items.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between text-sm mb-1.5">
-                      <span className="font-medium text-foreground">{skill.name}</span>
-                      <span className="text-muted-foreground font-mono text-xs tabular-nums">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: isVisible ? `${skill.level}%` : "0%",
-                        }}
-                      />
-                    </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {skillGroups.map((group, i) => {
+            const Icon = group.icon;
+            return (
+              <div
+                key={group.category}
+                className={`group p-5 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 ${
+                  isVisible ? `animate-reveal-up delay-${Math.min((i + 1) * 100, 500)}` : "opacity-0"
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-9 h-9 rounded-lg kotlin-blue-bg flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <Icon size={18} className="text-primary" />
                   </div>
-                ))}
+                  <h3 className="text-xs font-mono font-semibold text-primary uppercase tracking-wider">
+                    {categoryLabels[group.category] || group.category}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="px-2.5 py-1 text-xs font-medium rounded-md bg-secondary text-foreground"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

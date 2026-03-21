@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 12%;
 
-    --primary: 145 65% 42%;
+    --primary: 235 70% 58%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 12% 93%;
@@ -24,7 +24,7 @@
     --muted: 210 10% 94%;
     --muted-foreground: 220 10% 46%;
 
-    --accent: 145 65% 42%;
+    --accent: 235 70% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,16 +32,15 @@
 
     --border: 210 14% 89%;
     --input: 210 14% 89%;
-    --ring: 145 65% 42%;
+    --ring: 235 70% 58%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
     --surface-elevated: 0 0% 100%;
     --surface-sunken: 210 14% 95%;
-    --android-green: 145 65% 42%;
-    --android-green-light: 145 55% 94%;
-    --kotlin-purple: 268 60% 55%;
+    --kotlin-blue: 235 70% 58%;
+    --kotlin-blue-light: 235 55% 94%;
+    --kotlin-orange: 25 95% 55%;
     --code-bg: 220 16% 96%;
 
     --sidebar-background: 0 0% 98%;
@@ -64,7 +63,7 @@
     --popover: 220 16% 12%;
     --popover-foreground: 210 20% 92%;
 
-    --primary: 145 65% 48%;
+    --primary: 235 75% 65%;
     --primary-foreground: 220 18% 8%;
 
     --secondary: 220 14% 16%;
@@ -73,18 +72,18 @@
     --muted: 220 14% 16%;
     --muted-foreground: 210 12% 55%;
 
-    --accent: 145 65% 48%;
+    --accent: 235 75% 65%;
     --accent-foreground: 220 18% 8%;
 
     --border: 220 14% 18%;
     --input: 220 14% 18%;
-    --ring: 145 65% 48%;
+    --ring: 235 75% 65%;
 
     --surface-elevated: 220 16% 14%;
     --surface-sunken: 220 18% 6%;
-    --android-green: 145 65% 48%;
-    --android-green-light: 145 30% 16%;
-    --kotlin-purple: 268 55% 62%;
+    --kotlin-blue: 235 75% 65%;
+    --kotlin-blue-light: 235 30% 16%;
+    --kotlin-orange: 25 90% 60%;
     --code-bg: 220 16% 14%;
 
     --sidebar-background: 240 5.9% 10%;
@@ -128,7 +127,7 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(var(--kotlin-purple))];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(var(--kotlin-orange))];
   }
 
   .surface-elevated {
@@ -139,8 +138,8 @@
     @apply bg-[hsl(var(--surface-sunken))];
   }
 
-  .android-green-bg {
-    @apply bg-[hsl(var(--android-green-light))];
+  .kotlin-blue-bg {
+    @apply bg-[hsl(var(--kotlin-blue-light))];
   }
 }
 
