@@ -107,7 +107,12 @@ export const projects: Project[] = [
       "Testes unitários com JUnit e MockK para regras de negócio",
       "Cache de imagens com Coil",
     ],
-    screenshots: [],
+    screenshots: [
+      { src: recipeappHome, alt: "RecipeApp — Tela inicial com receita do dia" },
+      { src: recipeappSearch, alt: "RecipeApp — Busca inteligente por categoria" },
+      { src: recipeappDetail, alt: "RecipeApp — Detalhes da receita com ingredientes" },
+      { src: recipeappFavorites, alt: "RecipeApp — Tela de favoritos" },
+    ],
   },
 ];
 
