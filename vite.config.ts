@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
 
   return {
-    base: isGitHubPages ? "/portfolio/" : "/",
+    base: "/portfolio/",
     server: {
       host: "::",
       port: 8080,
