@@ -151,5 +151,7 @@ export const techCategories: Record<string, string> = {
   di: "Injeção de Dependência",
   async: "Assíncrono",
   network: "Network",
+  backend: "Backend",
+  database: "Banco de Dados",
   tools: "Ferramentas",
 };
