@@ -2,7 +2,7 @@
 
 Portfólio profissional de desenvolvedor de software, com foco em **Android nativo (Kotlin)** e boas práticas de engenharia.
 
-🔗 **Live:** [iagorochadev.github.io](https://iagorochadev.github.io) *(ajuste conforme seu deploy)*
+🔗 **Live:** [iagorochadev.github.io](https://iagorochadev.github.io)
 
 ---
 
