@@ -18,6 +18,10 @@ export interface Project {
 import gymappDark from "@/assets/gymapp-dark.png";
 import gymappLight from "@/assets/gymapp-light.png";
 import gymappDetailDark from "@/assets/gymapp-detail-dark.png";
+import recipeappHome from "@/assets/recipeapp-home.png";
+import recipeappSearch from "@/assets/recipeapp-search.png";
+import recipeappDetail from "@/assets/recipeapp-detail.png";
+import recipeappFavorites from "@/assets/recipeapp-favorites.png";
 
 export const projects: Project[] = [
   {
