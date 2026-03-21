@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import ProjectCard from "./ProjectCard";
 import ProjectDetail from "./ProjectDetail";
@@ -10,6 +10,12 @@ export default function ProjectsSection() {
   const { ref, isVisible } = useScrollReveal();
   const [filter, setFilter] = useState<string | null>(null);
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handler = () => setSelectedProject(null);
+    window.addEventListener("nav:projects", handler);
+    return () => window.removeEventListener("nav:projects", handler);
+  }, []);
 
   const filtered = filter
     ? projects.filter((p) => p.technologies.includes(filter))

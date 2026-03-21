@@ -27,8 +27,14 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
+    // Dispatch custom event so ProjectsSection can reset selection
+    if (href === "#projects") {
+      window.dispatchEvent(new CustomEvent("nav:projects"));
+    }
+    setTimeout(() => {
+      const el = document.querySelector(href);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }, 50);
   };
 
   return (
