@@ -6,7 +6,7 @@ const skillGroups = [
   {
     category: "language",
     icon: Code2,
-    items: ["Kotlin", "Java", "PHP", "Python", "JavaScript"],
+    items: ["Kotlin", "Java", "PHP", "Python", "JavaScript", "HTML", "CSS"],
   },
   {
     category: "ui",
