@@ -51,26 +51,23 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-24 lg:py-32" ref={ref}>
       <div className="container">
-        <div className={`max-w-2xl mb-16 ${isVisible ? "animate-reveal-up" : "opacity-0"}`}>
+        <div className={`max-w-3xl mx-auto mb-16 text-center ${isVisible ? "animate-reveal-up" : "opacity-0"}`}>
           <p className="text-sm font-mono font-medium text-primary mb-3 tracking-wider uppercase">
             Sobre mim
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-5">
-            Abordagem de desenvolvimento
-          </h2>
-          <p className="text-muted-foreground leading-relaxed text-lg">
+          <p className="text-muted-foreground leading-relaxed text-lg text-justify">
            Sou estudante de Ciência da Computação no IFNMG, com formação técnica em
             Informática e experiência em desenvolvimento de software. Atualmente, tenho foco
             em desenvolvimento Android nativo utilizando Kotlin, criando aplicações modernas
             com boas práticas de arquitetura e interfaces utilizando Jetpack Compose.
           </p>
-          <p className="text-muted-foreground leading-relaxed text-lg mt-4">
+          <p className="text-muted-foreground leading-relaxed text-lg mt-4 text-justify">
             Tenho experiência prévia com desenvolvimento backend em PHP, o que me proporciona
             uma visão mais completa na construção de aplicações. Busco constantemente evoluir
             minhas habilidades, com interesse em qualidade de código, testes e desenvolvimento
             de soluções eficientes e escaláveis.
           </p>
-          <p className="text-muted-foreground leading-relaxed text-lg mt-4">
+          <p className="text-muted-foreground leading-relaxed text-lg mt-4 text-justify">
             Estou em busca de oportunidades para aplicar meus conhecimentos na prática,
             contribuir com projetos reais e crescer como desenvolvedor Android.
           </p>
