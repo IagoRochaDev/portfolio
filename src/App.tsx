@@ -7,7 +7,20 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
-const routerBaseName = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+const getRouterBaseName = () => {
+  if (typeof window === "undefined") {
+    return import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+  }
+
+  if (!window.location.hostname.endsWith("github.io")) {
+    return "/";
+  }
+
+  const [repoName] = window.location.pathname.split("/").filter(Boolean);
+  return repoName ? `/${repoName}` : "/";
+};
+
+const routerBaseName = getRouterBaseName();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
