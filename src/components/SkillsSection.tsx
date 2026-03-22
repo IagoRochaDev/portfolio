@@ -16,7 +16,7 @@ const skillGroups = [
   {
     category: "architecture",
     icon: Layers,
-    items: ["MVVM", "Clean Architecture", "Repository Pattern"],
+    items: ["MVVM", "MVC", "Clean Architecture", "Repository Pattern"],
   },
   {
     category: "jetpack",
