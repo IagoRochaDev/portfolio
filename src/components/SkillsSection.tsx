@@ -11,7 +11,7 @@ const skillGroups = [
   {
     category: "ui",
     icon: Smartphone,
-    items: ["Jetpack Compose", "XML Layouts", "Blade", "Material Design"],
+    items: ["Jetpack Compose", "XML Layouts", "Blade", "Bootstrap", "Material Design"],
   },
   {
     category: "architecture",
