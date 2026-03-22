@@ -6,17 +6,17 @@ const skillGroups = [
   {
     category: "language",
     icon: Code2,
-    items: ["Kotlin", "Java", "PHP", "Python", "JavaScript"],
+    items: ["Kotlin", "Java", "PHP", "Python", "JavaScript", "HTML", "CSS"],
   },
   {
     category: "ui",
     icon: Smartphone,
-    items: ["Jetpack Compose", "XML Layouts", "Blade", "Material Design"],
+    items: ["Jetpack Compose", "XML Layouts", "Blade", "Bootstrap", "Material Design"],
   },
   {
     category: "architecture",
     icon: Layers,
-    items: ["MVVM", "Clean Architecture", "Repository Pattern"],
+    items: ["MVVM", "MVC", "Clean Architecture", "Repository Pattern"],
   },
   {
     category: "jetpack",

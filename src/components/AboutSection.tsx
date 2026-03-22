@@ -35,7 +35,7 @@ const timeline = [
     icon: Briefcase,
     title: "Desenvolvedor Backend (PHP) — Estágio",
     place: "NDTI – IFNMG | Campus Montes Claros",
-    period: "2024–2025",
+    period: "2024–2026",
   },
   {
     icon: GraduationCap,
@@ -59,10 +59,20 @@ export default function AboutSection() {
             Abordagem de desenvolvimento
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Sou estudante de Ciência da Computação no IFNMG, com formação técnica em
-            Informática. Tenho experiência como Desenvolvedor Backend (PHP) e atualmente
-            foco em desenvolvimento Android nativo com Kotlin. Busco aprendizado contínuo
-            e oportunidades para evoluir tecnicamente.
+           Sou estudante de Ciência da Computação no IFNMG, com formação técnica em
+            Informática e experiência em desenvolvimento de software. Atualmente, tenho foco
+            em desenvolvimento Android nativo utilizando Kotlin, criando aplicações modernas
+            com boas práticas de arquitetura e interfaces utilizando Jetpack Compose.
+          </p>
+          <p className="text-muted-foreground leading-relaxed text-lg mt-4">
+            Tenho experiência prévia com desenvolvimento backend em PHP, o que me proporciona
+            uma visão mais completa na construção de aplicações. Busco constantemente evoluir
+            minhas habilidades, com interesse em qualidade de código, testes e desenvolvimento
+            de soluções eficientes e escaláveis.
+          </p>
+          <p className="text-muted-foreground leading-relaxed text-lg mt-4">
+            Estou em busca de oportunidades para aplicar meus conhecimentos na prática,
+            contribuir com projetos reais e crescer como desenvolvedor Android.
           </p>
         </div>
 
