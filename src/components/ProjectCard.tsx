@@ -113,7 +113,7 @@ export default function ProjectCard({ project, index, isVisible, onClick }: Prop
         </div>
 
         {/* Links */}
-        <div className="flex items-center gap-3 pt-4 border-t border-border">
+        <div className="flex items-center gap-3 pt-4 border-t border-border mt-auto">
           <a
             href={project.githubUrl}
             target="_blank"

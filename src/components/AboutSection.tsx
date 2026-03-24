@@ -94,30 +94,35 @@ export default function AboutSection() {
           })}
         </div>
 
-        {/* Timeline */}
-        <div className={`max-w-2xl ${isVisible ? "animate-reveal-up delay-500" : "opacity-0"}`}>
-          <h3 className="text-xs font-mono font-semibold text-primary uppercase tracking-wider mb-6">
+        {/* Horizontal Timeline */}
+        <div className={`${isVisible ? "animate-reveal-up delay-500" : "opacity-0"}`}>
+          <h3 className="text-xs font-mono font-semibold text-primary uppercase tracking-wider mb-8 text-center">
             Formação & Experiência
           </h3>
-          <div className="space-y-4">
-            {timeline.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="flex gap-4 p-4 rounded-xl bg-card border border-border"
-                >
-                  <div className="w-9 h-9 rounded-lg kotlin-blue-bg flex items-center justify-center flex-shrink-0">
-                    <Icon size={16} className="text-primary" />
+          <div className="relative">
+            {/* Horizontal line */}
+            <div className="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-border" />
+            <div className="hidden md:block absolute top-6 left-0 h-0.5 bg-primary" style={{ width: "66%" }} />
+
+            <div className="grid md:grid-cols-3 gap-6 md:gap-4 relative">
+              {timeline.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title} className="flex flex-col items-center text-center">
+                    {/* Node dot */}
+                    <div className="relative z-10 w-12 h-12 rounded-full kotlin-blue-bg flex items-center justify-center mb-4 border-4 border-background shadow-md">
+                      <Icon size={18} className="text-primary" />
+                    </div>
+                    {/* Card */}
+                    <div className="p-4 rounded-xl bg-card border border-border w-full">
+                      <p className="text-xs font-mono font-bold text-primary mb-1">{item.period}</p>
+                      <h4 className="font-semibold text-foreground text-sm mb-1">{item.title}</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{item.place}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground">{item.place}</p>
-                    <p className="text-xs font-mono text-muted-foreground mt-1">{item.period}</p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
