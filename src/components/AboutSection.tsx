@@ -88,7 +88,7 @@ export default function AboutSection() {
                   <Icon size={20} className="text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed text-justify">{item.description}</p>
               </div>
             );
           })}
