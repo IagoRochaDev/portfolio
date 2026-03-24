@@ -14,7 +14,7 @@ export default function ProjectCard({ project, index, isVisible, onClick }: Prop
 
   return (
     <div
-      className={`group cursor-pointer rounded-xl bg-card border border-border overflow-hidden hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover:-translate-y-1 ${
+      className={`group cursor-pointer rounded-xl bg-card border border-border overflow-hidden hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover:-translate-y-1 flex flex-col ${
         isVisible ? `animate-reveal-up ${delays[index % 3]}` : "opacity-0"
       }`}
       onClick={onClick}
