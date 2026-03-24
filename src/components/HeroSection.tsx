@@ -40,7 +40,7 @@ export default function HeroSection() {
               <span className="text-primary">Oliveira</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed text-justify">
               Estudante de Ciência da Computação no IFNMG com formação técnica em Informática.
               Experiência com Kotlin, PHP e Clean Architecture. Buscando evoluir
               continuamente e contribuir com soluções eficientes.

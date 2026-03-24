@@ -36,7 +36,7 @@ export default function ProjectsSection() {
       <div className="container">
         <div className={`max-w-2xl mb-12 ${isVisible ? "animate-reveal-up" : "opacity-0"}`}>
           <p className="text-sm font-mono font-medium text-primary mb-3 tracking-wider uppercase">
-            Portfólio
+            Portifólio
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-5">
             Projetos em destaque
