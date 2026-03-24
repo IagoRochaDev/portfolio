@@ -12,7 +12,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

@@ -14,7 +14,7 @@ export default function ProjectCard({ project, index, isVisible, onClick }: Prop
 
   return (
     <div
-      className={`group cursor-pointer rounded-xl bg-card border border-border overflow-hidden hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover:-translate-y-1 ${
+      className={`group cursor-pointer rounded-xl bg-card border border-border overflow-hidden hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover:-translate-y-1 flex flex-col ${
         isVisible ? `animate-reveal-up ${delays[index % 3]}` : "opacity-0"
       }`}
       onClick={onClick}
@@ -54,7 +54,7 @@ export default function ProjectCard({ project, index, isVisible, onClick }: Prop
         />
       )}
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-3 mb-2">
           <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
             {project.title}
@@ -113,7 +113,7 @@ export default function ProjectCard({ project, index, isVisible, onClick }: Prop
         </div>
 
         {/* Links */}
-        <div className="flex items-center gap-3 pt-4 border-t border-border">
+        <div className="flex items-center gap-3 pt-4 border-t border-border mt-auto">
           <a
             href={project.githubUrl}
             target="_blank"
