@@ -27,6 +27,12 @@ const principles = [
 const timeline = [
   {
     icon: GraduationCap,
+    title: "Técnico em Informática",
+    place: "E. E. Benício Prates (Pronatec)",
+    period: "2016–2018",
+  },
+  {
+    icon: GraduationCap,
     title: "Bacharelado em Ciência da Computação",
     place: "IFNMG — Campus Montes Claros",
     period: "2023–2027",
@@ -37,14 +43,7 @@ const timeline = [
     place: "NDTI – IFNMG | Campus Montes Claros",
     period: "2024–2026",
   },
-  {
-    icon: GraduationCap,
-    title: "Técnico em Informática",
-    place: "E. E. Benício Prates (Pronatec)",
-    period: "2016–2018",
-  },
 ];
-
 export default function AboutSection() {
   const { ref, isVisible } = useScrollReveal();
 
@@ -101,8 +100,7 @@ export default function AboutSection() {
           </h3>
           <div className="relative">
             {/* Horizontal line */}
-            <div className="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-border" />
-            <div className="hidden md:block absolute top-6 left-0 h-0.5 bg-primary" style={{ width: "66%" }} />
+            <div className="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-primary" />
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-4 relative">
               {timeline.map((item, i) => {
