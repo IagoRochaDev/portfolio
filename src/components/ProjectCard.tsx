@@ -54,7 +54,7 @@ export default function ProjectCard({ project, index, isVisible, onClick }: Prop
         />
       )}
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-3 mb-2">
           <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
             {project.title}
