@@ -27,6 +27,12 @@ const principles = [
 const timeline = [
   {
     icon: GraduationCap,
+    title: "Técnico em Informática",
+    place: "E. E. Benício Prates (Pronatec)",
+    period: "2016–2018",
+  },
+  {
+    icon: GraduationCap,
     title: "Bacharelado em Ciência da Computação",
     place: "IFNMG — Campus Montes Claros",
     period: "2023–2027",
@@ -37,14 +43,7 @@ const timeline = [
     place: "NDTI – IFNMG | Campus Montes Claros",
     period: "2024–2026",
   },
-  {
-    icon: GraduationCap,
-    title: "Técnico em Informática",
-    place: "E. E. Benício Prates (Pronatec)",
-    period: "2016–2018",
-  },
 ];
-
 export default function AboutSection() {
   const { ref, isVisible } = useScrollReveal();
 
