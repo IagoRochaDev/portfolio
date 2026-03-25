@@ -87,7 +87,7 @@ export default function ProjectsSection() {
               project={project}
               index={i}
               isVisible={isVisible}
-              onClick={() => setSelectedProject(project.id)}
+              onClick={() => selectProject(project.id)}
             />
           ))}
         </div>

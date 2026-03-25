@@ -7,17 +7,25 @@ interface Props {
   onBack: () => void;
 }
 
+function BackButton({ onBack }: { onBack: () => void }) {
+  return (
+    <button
+      onClick={onBack}
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-primary border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+    >
+      <ArrowLeft size={16} />
+      Voltar aos projetos
+    </button>
+  );
+}
+
 export default function ProjectDetail({ project, onBack }: Props) {
   return (
     <section className="py-24 lg:py-32 surface-sunken min-h-screen">
       <div className="container max-w-4xl animate-reveal-up">
-        <button
-          onClick={onBack}
-          className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-10"
-        >
-          <ArrowLeft size={16} />
-          Voltar aos projetos
-        </button>
+        <BackButton onBack={onBack} />
+
+        <div className="mt-10" />
 
         {/* Accent bar */}
         <div
@@ -136,7 +144,7 @@ export default function ProjectDetail({ project, onBack }: Props) {
         </div>
 
         {/* Features */}
-        <div>
+        <div className="mb-12">
           <h2 className="text-sm font-mono font-semibold text-primary uppercase tracking-wider mb-4">
             Funcionalidades
           </h2>
@@ -150,6 +158,11 @@ export default function ProjectDetail({ project, onBack }: Props) {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Bottom back button */}
+        <div className="flex justify-center pt-6 border-t border-border">
+          <BackButton onBack={onBack} />
         </div>
       </div>
     </section>
