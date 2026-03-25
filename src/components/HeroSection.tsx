@@ -41,7 +41,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed text-justify">
-              Estudante de Ciência da Computação no IFNMG com formação técnica em Informática.
+              Graduando em Ciência da Computação no IFNMG com formação técnica em Informática.
               Experiência com Kotlin, PHP e Clean Architecture. Buscando evoluir
               continuamente e contribuir com soluções eficientes.
             </p>

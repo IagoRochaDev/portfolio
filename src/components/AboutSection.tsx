@@ -55,20 +55,18 @@ export default function AboutSection() {
             Sobre mim
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg text-justify">
-           Sou estudante de Ciência da Computação no IFNMG, com formação técnica em
-            Informática e experiência em desenvolvimento de software. Atualmente, tenho foco
-            em desenvolvimento Android nativo utilizando Kotlin, criando aplicações modernas
-            com boas práticas de arquitetura e interfaces utilizando Jetpack Compose.
+            Sou desenvolvedor em formação com foco em Android nativo utilizando Kotlin.
+            Desenvolvo aplicações modernas com Jetpack Compose, aplicando boas práticas de
+            arquitetura, organização de código e integração com APIs.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg mt-4 text-justify">
-            Tenho experiência prévia com desenvolvimento backend em PHP, o que me proporciona
-            uma visão mais completa na construção de aplicações. Busco constantemente evoluir
-            minhas habilidades, com interesse em qualidade de código, testes e desenvolvimento
-            de soluções eficientes e escaláveis.
+            Tenho experiência com backend em PHP, o que me permite construir aplicações
+            mais completas. Busco constantemente evoluir em qualidade de código, testes e
+            desenvolvimento de soluções eficientes.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg mt-4 text-justify">
-            Estou em busca de oportunidades para aplicar meus conhecimentos na prática,
-            contribuir com projetos reais e crescer como desenvolvedor Android.
+            Atualmente estou em busca de oportunidades para atuar com desenvolvimento
+            Android e contribuir com projetos reais.
           </p>
         </div>
 
