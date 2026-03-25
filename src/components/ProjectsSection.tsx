@@ -37,7 +37,10 @@ export default function ProjectsSection() {
   if (selected) {
     return (
       <div id="projects">
-        <ProjectDetail project={selected} onBack={() => setSelectedProject(null)} />
+        <ProjectDetail project={selected} onBack={() => {
+          setSelectedProject(null);
+          scrollToProjects();
+        }} />
       </div>
     );
   }
