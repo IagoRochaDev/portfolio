@@ -22,6 +22,10 @@ import recipeappHome from "@/assets/recipeapp-home.png";
 import recipeappSearch from "@/assets/recipeapp-search.png";
 import recipeappDetail from "@/assets/recipeapp-detail.png";
 import recipeappFavorites from "@/assets/recipeapp-favorites.png";
+import expenseappHomeDark from "@/assets/expenseapp-home-dark.png";
+import expenseappStatsDark from "@/assets/expenseapp-stats-dark.png";
+import expenseappHistoryDark from "@/assets/expenseapp-history-dark.png";
+import expenseappNewTransactionDark from "@/assets/expenseapp-new-transaction-dark.png";
 
 export const projects: Project[] = [
   {
