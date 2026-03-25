@@ -37,7 +37,7 @@ export default function ProjectDetail({ project, onBack }: Props) {
           {project.title}
         </h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+        <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
           {project.longDescription}
         </p>
 
