@@ -22,6 +22,10 @@ import recipeappHome from "@/assets/recipeapp-home.png";
 import recipeappSearch from "@/assets/recipeapp-search.png";
 import recipeappDetail from "@/assets/recipeapp-detail.png";
 import recipeappFavorites from "@/assets/recipeapp-favorites.png";
+import expenseappHomeDark from "@/assets/expenseapp-home-dark.png";
+import expenseappStatsDark from "@/assets/expenseapp-stats-dark.png";
+import expenseappHistoryDark from "@/assets/expenseapp-history-dark.png";
+import expenseappNewTransactionDark from "@/assets/expenseapp-new-transaction-dark.png";
 
 export const projects: Project[] = [
   {
@@ -112,6 +116,54 @@ export const projects: Project[] = [
       { src: recipeappSearch, alt: "RecipeApp — Busca inteligente por categoria" },
       { src: recipeappDetail, alt: "RecipeApp — Detalhes da receita com ingredientes" },
       { src: recipeappFavorites, alt: "RecipeApp — Tela de favoritos" },
+    ],
+  },
+  {
+    id: "expenseapp",
+    title: "ExpenseApp",
+    description:
+      "App de controle financeiro pessoal com gráficos customizados em Canvas, reatividade com Flow e testes unitários — construído 100% com MAD.",
+    longDescription:
+      "O ExpenseApp é um aplicativo Android nativo focado em controle de finanças pessoais. Desenvolvido com as melhores práticas de Modern Android Development (MAD), o projeto demonstra o uso avançado de Jetpack Compose, Clean Architecture e reatividade com Kotlin Flows. Permite registrar receitas e despesas, visualizar estatísticas por categoria com gráfico Donut Chart customizado e acompanhar o histórico de transações.",
+    technologies: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Room",
+      "Hilt",
+      "Coroutines",
+      "Flow",
+      "Navigation Compose",
+      "Material Design 3",
+    ],
+    architecture: [
+      "Clean Architecture",
+      "MVVM",
+      "Repository Pattern",
+      "UDF (Fluxo Unidirecional)",
+    ],
+    highlights: [
+      "Donut Chart customizado com Canvas API (drawArc)",
+      "Fonte de dados reativa com Flow do Room",
+      "Testes unitários com MockK e Robolectric",
+      "CI/CD com GitHub Actions",
+    ],
+    githubUrl: "https://github.com/IagoRochaDev/ExpenseApp-Android",
+    accentColor: "220 80% 55%",
+    features: [
+      "Registro de receitas e despesas com título, valor, categoria e data",
+      "Donut Chart de alto desempenho construído do zero com Canvas API do Compose",
+      "Fonte de dados reativa — alterações refletidas instantaneamente em todas as telas",
+      "Estatísticas por categoria com porcentagens e barras de progresso",
+      "Histórico completo de transações com valores coloridos (receita/despesa)",
+      "Suporte nativo a Dark/Light Mode com Material Design 3",
+      "Testes unitários para DAOs e Repositórios com MockK, Robolectric e JUnit 4",
+      "CI/CD configurado com GitHub Actions para builds e testes automatizados",
+    ],
+    screenshots: [
+      { src: expenseappHomeDark, alt: "ExpenseApp — Tela inicial com saldo e transações" },
+      { src: expenseappStatsDark, alt: "ExpenseApp — Estatísticas com gráfico Donut Chart" },
+      { src: expenseappHistoryDark, alt: "ExpenseApp — Histórico de transações" },
+      { src: expenseappNewTransactionDark, alt: "ExpenseApp — Nova transação (despesa)" },
     ],
   },
 ];
