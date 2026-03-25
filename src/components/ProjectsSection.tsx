@@ -11,6 +11,13 @@ export default function ProjectsSection() {
   const [filter, setFilter] = useState<string | null>(null);
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
+  const selectProject = (id: string) => {
+    setSelectedProject(id);
+    setTimeout(() => {
+      document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+  };
+
   useEffect(() => {
     const handler = () => setSelectedProject(null);
     window.addEventListener("nav:projects", handler);
