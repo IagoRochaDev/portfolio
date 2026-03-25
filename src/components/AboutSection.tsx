@@ -9,7 +9,7 @@ const principles = [
   },
   {
     icon: Code2,
-    title: "Código Limpo",
+    title: "Clean Code",
     description: "Nomes significativos, funções pequenas, SOLID e testes como prioridade.",
   },
   {
