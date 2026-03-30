@@ -128,6 +128,51 @@ export const projects: Project[] = [
       { src: gymappDetailDark, alt: "GymApp — Detalhe do treino com check" },
     ],
   },
+  {
+    id: "recipeapp",
+    title: "RecipeApp",
+    description:
+      "App de receitas com busca inteligente, shimmer loading e monitoramento de rede em tempo real — consumindo a API TheMealDB.",
+    longDescription:
+      "Aplicativo Android nativo que consome a API pública TheMealDB para exibir receitas, categorias e permitir buscas inteligentes. Focado em Experiência do Utilizador (UX) e Código Limpo, com funcionalidades avançadas como roteamento inteligente de busca e internacionalização.",
+    technologies: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Retrofit",
+      "Hilt",
+      "Coroutines",
+      "Flow",
+      "Coil",
+      "Material Design 3",
+    ],
+    architecture: [
+      "MVVM",
+      "Repository Pattern",
+      "UDF (Fluxo Unidirecional)",
+    ],
+    highlights: [
+      "Smart Search com roteamento de endpoints",
+      "Shimmer Effect customizado reutilizável",
+      "Monitoramento de rede via Flow",
+      "Testes unitários com MockK",
+    ],
+    githubUrl: "https://github.com/IagoRochaDev/RecipeApp-Android",
+    accentColor: "145 65% 42%",
+    features: [
+      "Busca Inteligente — analisa input em tempo real e roteia para endpoints de filtro da API",
+      "Shimmer Effect customizado com Modifier reutilizável em Compose",
+      "Monitoramento de rede global via Flow com Snackbars dinâmicas",
+      "Internacionalização (i18n) — suporte a Inglês e Português",
+      "Testes unitários com JUnit e MockK para regras de negócio",
+      "Cache de imagens com Coil",
+    ],
+    screenshots: [
+      { src: recipeappHome, alt: "RecipeApp — Tela inicial com receita do dia" },
+      { src: recipeappSearch, alt: "RecipeApp — Busca inteligente por categoria" },
+      { src: recipeappDetail, alt: "RecipeApp — Detalhes da receita com ingredientes" },
+      { src: recipeappFavorites, alt: "RecipeApp — Tela de favoritos" },
+    ],
+  },
 ];
 
 export const skills = [
