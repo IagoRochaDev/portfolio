@@ -34,7 +34,7 @@ export const projects: Project[] = [
     description:
       "App de controle financeiro pessoal com autenticação Firebase, sincronização Firestore, gráficos customizados em Canvas e testes unitários — construído 100% com MAD.",
     longDescription:
-      "O ExpenseApp é um aplicativo Android nativo focado em controle de finanças pessoais. Desenvolvido com as melhores práticas de Modern Android Development (MAD), o projeto demonstra o uso avançado de Jetpack Compose, Clean Architecture e reatividade com Kotlin Flows. Conta com autenticação de usuários e sincronização de dados em tempo real via Firebase (Auth + Firestore), além de permitir registrar receitas e despesas, visualizar estatísticas por categoria com gráfico Donut Chart customizado e acompanhar o histórico de transações.",
+      "O ExpenseApp é um aplicativo Android nativo focado em controle de finanças pessoais. Desenvolvido com as melhores práticas de Modern Android Development (MAD), o projeto demonstra o uso avançado de Jetpack Compose, Clean Architecture e reatividade com Kotlin Flows. Conta com autenticação de usuários e sincronização de dados em tempo real via Firebase (Auth + Firestore), além de permitir registrar receitas e despesas, visualizar estatísticas por categoria de despesas com gráfico Donut Chart customizado e acompanhar o histórico de transações.",
     technologies: [
       "Kotlin",
       "Jetpack Compose",
