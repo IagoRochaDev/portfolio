@@ -126,6 +126,33 @@ export default function ProjectDetail({ project, onBack }: Props) {
           </div>
         </div>
 
+        {/* Tech Justifications */}
+        {project.techJustifications && project.techJustifications.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-sm font-mono font-semibold text-primary uppercase tracking-wider mb-4">
+              Decisões Técnicas
+            </h2>
+            <div className="grid gap-3">
+              {project.techJustifications.map((tj) => (
+                <div
+                  key={tj.tech}
+                  className="flex items-start gap-3 p-4 rounded-lg bg-card border border-border"
+                >
+                  <Lightbulb
+                    size={16}
+                    style={{ color: `hsl(${project.accentColor})` }}
+                    className="flex-shrink-0 mt-0.5"
+                  />
+                  <div>
+                    <span className="text-sm font-semibold text-foreground">{tj.tech}</span>
+                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{tj.reason}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Architecture */}
         <div className="mb-10">
           <h2 className="text-sm font-mono font-semibold text-primary uppercase tracking-wider mb-4">
