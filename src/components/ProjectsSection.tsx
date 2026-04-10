@@ -8,7 +8,6 @@ import { projects } from "@/data/portfolio-data";
 
 export default function ProjectsSection() {
   const { ref, isVisible } = useScrollReveal();
-  const [filter, setFilter] = useState<string | null>(null);
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   const scrollToProjects = () => {
