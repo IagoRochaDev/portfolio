@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 import ProjectDetail from "./ProjectDetail";
 import { projects } from "@/data/portfolio-data";
 
-const allTechs = Array.from(new Set(projects.flatMap((p) => p.technologies)));
+
 
 export default function ProjectsSection() {
   const { ref, isVisible } = useScrollReveal();
