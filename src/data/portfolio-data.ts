@@ -9,6 +9,7 @@ export interface Project {
   githubUrl: string;
   accentColor: string;
   features: string[];
+  techJustifications?: { tech: string; reason: string }[];
   screenshots: {
     src: string;
     alt: string;
@@ -32,9 +33,9 @@ export const projects: Project[] = [
     id: "expenseapp",
     title: "ExpenseApp",
     description:
-      "App de controle financeiro pessoal com autenticação Firebase, sincronização Firestore, gráficos customizados em Canvas e testes unitários — construído 100% com MAD.",
+      "Desenvolvi um aplicativo Android para gestão de despesas, possibilitando sincronização de dados em tempo real e persistência na nuvem, utilizando Kotlin, Firebase Firestore e arquitetura MVVM.",
     longDescription:
-      "O ExpenseApp é um aplicativo Android nativo focado em controle de finanças pessoais. Desenvolvido com as melhores práticas de Modern Android Development (MAD), o projeto demonstra o uso avançado de Jetpack Compose, Clean Architecture e reatividade com Kotlin Flows. Conta com autenticação de usuários e sincronização de dados em tempo real via Firebase (Auth + Firestore), além de permitir registrar receitas e despesas, visualizar estatísticas por categoria de despesas com gráfico Donut Chart customizado e acompanhar o histórico de transações.",
+      "Desenvolvi um aplicativo Android nativo para controle de finanças pessoais, possibilitando que o usuário registre receitas e despesas com sincronização em tempo real e visualize estatísticas detalhadas por categoria, utilizando Kotlin, Jetpack Compose, Firebase (Auth + Firestore), Room, e Clean Architecture com MVVM.\n\nO Firebase Firestore foi escolhido por oferecer sincronização automática em tempo real e persistência na nuvem sem a necessidade de um backend próprio — ideal para aplicações centradas no usuário. O Firebase Auth complementa essa escolha ao fornecer autenticação segura com sessão persistente, eliminando a complexidade de gerenciar tokens manualmente.\n\nA arquitetura MVVM foi adotada para separar a lógica de negócio da interface, permitindo que a UI reaja automaticamente às mudanças de estado via Kotlin Flows. O uso de ViewModel também garante a preservação de estado em mudanças de configuração, como rotação de tela.\n\nO Room foi utilizado como camada de persistência local com suporte reativo via Flow, garantindo que alterações nos dados sejam refletidas instantaneamente em todas as telas. A Clean Architecture foi aplicada para organizar o projeto em camadas independentes (data, domain, presentation), facilitando testes, manutenção e evolução do código.\n\nO Donut Chart foi construído do zero com a Canvas API do Compose (drawArc), evitando dependências externas de gráficos e garantindo controle total sobre a renderização e performance.",
     technologies: [
       "Kotlin",
       "Jetpack Compose",
@@ -76,6 +77,43 @@ export const projects: Project[] = [
       "Testes unitários para DAOs e Repositórios com MockK, Robolectric e JUnit 4",
       "CI/CD configurado com GitHub Actions para builds e testes automatizados",
     ],
+    techJustifications: [
+      {
+        tech: "Firebase Firestore",
+        reason:
+          "Escolhido por oferecer sincronização automática em tempo real e persistência na nuvem sem necessidade de backend próprio, ideal para aplicações centradas no usuário.",
+      },
+      {
+        tech: "Firebase Auth",
+        reason:
+          "Fornece autenticação segura com sessão persistente, eliminando a complexidade de gerenciar tokens e fluxos de login manualmente.",
+      },
+      {
+        tech: "MVVM",
+        reason:
+          "Adotado para separar lógica de negócio da interface, permitindo que a UI reaja automaticamente às mudanças de estado. O ViewModel também preserva estado em mudanças de configuração.",
+      },
+      {
+        tech: "Room + Flow",
+        reason:
+          "Room como persistência local com suporte reativo via Flow, garantindo que alterações nos dados sejam refletidas instantaneamente em todas as telas.",
+      },
+      {
+        tech: "Clean Architecture",
+        reason:
+          "Organiza o projeto em camadas independentes (data, domain, presentation), facilitando testes unitários, manutenção e evolução do código.",
+      },
+      {
+        tech: "Canvas API (Donut Chart)",
+        reason:
+          "Construído do zero com drawArc do Compose, evitando dependências externas de bibliotecas de gráficos e garantindo controle total sobre renderização e performance.",
+      },
+      {
+        tech: "Hilt",
+        reason:
+          "Escolhido para injeção de dependência por ser a solução oficial do Android, com integração nativa ao ViewModel e suporte a escopos do ciclo de vida.",
+      },
+    ],
     screenshots: [
       { src: expenseappHomeDark, alt: "ExpenseApp — Tela inicial com saldo e transações" },
       { src: expenseappStatsDark, alt: "ExpenseApp — Estatísticas com gráfico Donut Chart" },
@@ -87,9 +125,9 @@ export const projects: Project[] = [
     id: "gymapp",
     title: "GymApp",
     description:
-      "Aplicativo completo de gerenciamento de treinos com controle de séries, repetições e cargas — construído 100% com Modern Android Development (MAD).",
+      "Desenvolvi um aplicativo Android para gerenciamento de treinos, estruturando o código de forma organizada e de fácil manutenção, utilizando Kotlin e arquitetura MVVM.",
     longDescription:
-      "O GymApp permite que os usuários criem rotinas personalizadas, adicionem exercícios com controle de séries, repetições e cargas, e acompanhem o progresso de forma visual e intuitiva. Desenvolvido com foco em escalabilidade e manutenção, seguindo Clean Architecture e MVVM.",
+      "Desenvolvi um aplicativo Android nativo para gerenciamento de treinos, permitindo criar rotinas personalizadas com controle de séries, repetições e cargas, utilizando Kotlin, Jetpack Compose e arquitetura MVVM.\n\nApesar de ser um projeto de menor complexidade, a arquitetura MVVM foi adotada para praticar a separação de responsabilidades entre UI e lógica de negócio, facilitando a escalabilidade futura caso novas funcionalidades sejam adicionadas.\n\nEssa abordagem também permite uma melhor testabilidade e organização do código, evitando acoplamento direto entre interface e regras da aplicação. O Fluxo Unidirecional de Dados (UDF) garante previsibilidade no estado da UI, com eventos fluindo da View para o ViewModel e estados retornando de forma reativa.",
     technologies: [
       "Kotlin",
       "Jetpack Compose",
@@ -104,6 +142,7 @@ export const projects: Project[] = [
       "MVVM",
       "Repository Pattern",
       "Single-Activity",
+      "UDF (Fluxo Unidirecional)",
     ],
     highlights: [
       "Swipe-to-Dismiss com animações nativas",
@@ -122,6 +161,28 @@ export const projects: Project[] = [
       "Suporte nativo a Light/Dark Mode com paleta de alto contraste",
       "Empty States com orientação ao usuário",
     ],
+    techJustifications: [
+      {
+        tech: "MVVM",
+        reason:
+          "Mesmo em um projeto de menor complexidade, foi adotado para praticar a separação de responsabilidades entre UI e lógica de negócio, facilitando a escalabilidade futura e a testabilidade do código.",
+      },
+      {
+        tech: "Room",
+        reason:
+          "Utilizado para persistência local dos treinos, oferecendo uma API type-safe sobre SQLite com suporte a queries reativas via Flow.",
+      },
+      {
+        tech: "Hilt",
+        reason:
+          "Adotado para manter consistência com os demais projetos e garantir injeção de dependência com escopo adequado ao ciclo de vida dos componentes Android.",
+      },
+      {
+        tech: "UDF (Fluxo Unidirecional)",
+        reason:
+          "Garante previsibilidade no estado da UI — eventos fluem da View para o ViewModel, e estados retornam de forma reativa, evitando side-effects e facilitando o debug.",
+      },
+    ],
     screenshots: [
       { src: gymappDark, alt: "GymApp — Tela inicial (Dark Mode)" },
       { src: gymappLight, alt: "GymApp — Tela inicial (Light Mode)" },
@@ -132,9 +193,9 @@ export const projects: Project[] = [
     id: "recipeapp",
     title: "RecipeApp",
     description:
-      "App de receitas com busca inteligente, shimmer loading e monitoramento de rede em tempo real — consumindo a API TheMealDB.",
+      "Desenvolvi um aplicativo Android integrado a API REST de receitas, garantindo atualização dinâmica dos dados e melhor experiência do usuário, utilizando Kotlin, Retrofit e arquitetura MVVM com camada de repositório.",
     longDescription:
-      "Aplicativo Android nativo que consome a API pública TheMealDB para exibir receitas, categorias e permitir buscas inteligentes. Focado em Experiência do Utilizador (UX) e Código Limpo, com funcionalidades avançadas como roteamento inteligente de busca e internacionalização.",
+      "Desenvolvi um aplicativo Android nativo que consome a API pública TheMealDB para exibir receitas e categorias, permitindo buscas inteligentes com roteamento automático de endpoints, utilizando Kotlin, Jetpack Compose, Retrofit e arquitetura MVVM com camada de repositório.\n\nO Retrofit foi utilizado para simplificar a comunicação com a API REST, oferecendo uma forma estruturada e type-safe de realizar requisições HTTP e serializar respostas automaticamente.\n\nA camada de repositório permite abstrair a origem dos dados, facilitando futuras mudanças — como adicionar cache local ou trocar a API — sem impactar outras camadas da aplicação.\n\nA arquitetura MVVM foi aplicada para organizar o fluxo de dados entre UI e camada de dados, permitindo uma interface reativa e desacoplada. O monitoramento de rede via Flow com ConnectivityManager garante que o usuário seja notificado em tempo real sobre mudanças na conectividade, melhorando significativamente a experiência offline.",
     technologies: [
       "Kotlin",
       "Jetpack Compose",
@@ -165,6 +226,33 @@ export const projects: Project[] = [
       "Internacionalização (i18n) — suporte a Inglês e Português",
       "Testes unitários com JUnit e MockK para regras de negócio",
       "Cache de imagens com Coil",
+    ],
+    techJustifications: [
+      {
+        tech: "Retrofit",
+        reason:
+          "Utilizado para simplificar a comunicação com a API REST, oferecendo requisições HTTP estruturadas, type-safe e com serialização automática de respostas.",
+      },
+      {
+        tech: "Camada de Repositório",
+        reason:
+          "Abstrai a origem dos dados, facilitando futuras mudanças como adicionar cache local ou trocar a API sem impactar outras camadas da aplicação.",
+      },
+      {
+        tech: "MVVM",
+        reason:
+          "Aplicado para organizar o fluxo de dados entre UI e camada de dados, permitindo uma interface reativa e desacoplada da lógica de negócio.",
+      },
+      {
+        tech: "Coil",
+        reason:
+          "Escolhido para carregamento de imagens por ser leve, nativo em Kotlin e com integração direta ao Compose, oferecendo cache automático em disco e memória.",
+      },
+      {
+        tech: "Monitoramento de Rede (Flow + ConnectivityManager)",
+        reason:
+          "Garante que o usuário seja notificado em tempo real sobre mudanças na conectividade via Snackbars dinâmicas, melhorando a experiência offline.",
+      },
     ],
     screenshots: [
       { src: recipeappHome, alt: "RecipeApp — Tela inicial com receita do dia" },

@@ -1,4 +1,4 @@
-import { ArrowLeft, Check, Github, Sparkles } from "lucide-react";
+import { ArrowLeft, Check, Github, Lightbulb, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Project } from "@/data/portfolio-data";
 
