@@ -4,11 +4,10 @@ import ProjectCard from "./ProjectCard";
 import ProjectDetail from "./ProjectDetail";
 import { projects } from "@/data/portfolio-data";
 
-const allTechs = Array.from(new Set(projects.flatMap((p) => p.technologies)));
+
 
 export default function ProjectsSection() {
   const { ref, isVisible } = useScrollReveal();
-  const [filter, setFilter] = useState<string | null>(null);
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   const scrollToProjects = () => {
@@ -27,10 +26,6 @@ export default function ProjectsSection() {
     window.addEventListener("nav:projects", handler);
     return () => window.removeEventListener("nav:projects", handler);
   }, []);
-
-  const filtered = filter
-    ? projects.filter((p) => p.technologies.includes(filter))
-    : projects;
 
   const selected = projects.find((p) => p.id === selectedProject);
 
@@ -60,35 +55,8 @@ export default function ProjectsSection() {
           </p>
         </div>
 
-        {/* Tech filter */}
-        <div className={`flex flex-wrap gap-2 mb-10 ${isVisible ? "animate-reveal-up delay-100" : "opacity-0"}`}>
-          <button
-            onClick={() => setFilter(null)}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-              filter === null
-                ? "bg-primary text-primary-foreground shadow-sm"
-                : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-            }`}
-          >
-            Todos
-          </button>
-          {allTechs.map((tech) => (
-            <button
-              key={tech}
-              onClick={() => setFilter(filter === tech ? null : tech)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-                filter === tech
-                  ? "bg-primary text-primary-foreground shadow-sm"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
-            >
-              {tech}
-            </button>
-          ))}
-        </div>
-
         <div className="grid md:grid-cols-2 gap-6">
-          {filtered.map((project, i) => (
+          {projects.map((project, i) => (
             <ProjectCard
               key={project.id}
               project={project}
@@ -98,12 +66,6 @@ export default function ProjectsSection() {
             />
           ))}
         </div>
-
-        {filtered.length === 0 && (
-          <p className="text-center text-muted-foreground py-12">
-            Nenhum projeto encontrado com essa tecnologia.
-          </p>
-        )}
       </div>
     </section>
   );
