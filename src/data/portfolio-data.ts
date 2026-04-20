@@ -27,6 +27,11 @@ import expenseappHomeDark from "@/assets/expenseapp-home-dark.png";
 import expenseappStatsDark from "@/assets/expenseapp-stats-dark.png";
 import expenseappHistoryDark from "@/assets/expenseapp-history-dark.png";
 import expenseappNewTransactionDark from "@/assets/expenseapp-new-transaction-dark.png";
+import savepointLogin from "@/assets/savepoint-login.png";
+import savepointHome from "@/assets/savepoint-home.png";
+import savepointLibrary from "@/assets/savepoint-library.png";
+import savepointSearch from "@/assets/savepoint-search.png";
+import savepointSearchCategory from "@/assets/savepoint-search-category.png";
 
 export const projects: Project[] = [
   {
