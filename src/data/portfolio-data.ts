@@ -117,6 +117,14 @@ export const projects: Project[] = [
         tech: "Hilt",
         reason:
           "Escolhido para injeção de dependência por ser a solução oficial do Android, com integração nativa ao ViewModel e suporte a escopos do ciclo de vida.",
+      },
+    ],
+    screenshots: [
+      { src: expenseappHomeDark, alt: "ExpenseApp — Tela inicial com saldo e transações" },
+      { src: expenseappStatsDark, alt: "ExpenseApp — Estatísticas com gráfico Donut Chart" },
+      { src: expenseappHistoryDark, alt: "ExpenseApp — Histórico de transações" },
+      { src: expenseappNewTransactionDark, alt: "ExpenseApp — Nova transação (despesa)" },
+    ],
   },
   {
     id: "savepoint",
@@ -218,14 +226,6 @@ export const projects: Project[] = [
       { src: savepointLibrary, alt: "SavePoint — Biblioteca pessoal de jogos" },
       { src: savepointSearch, alt: "SavePoint — Busca com filtros por categoria" },
       { src: savepointSearchCategory, alt: "SavePoint — Resultados filtrados por Adventure" },
-    ],
-  },
-    ],
-    screenshots: [
-      { src: expenseappHomeDark, alt: "ExpenseApp — Tela inicial com saldo e transações" },
-      { src: expenseappStatsDark, alt: "ExpenseApp — Estatísticas com gráfico Donut Chart" },
-      { src: expenseappHistoryDark, alt: "ExpenseApp — Histórico de transações" },
-      { src: expenseappNewTransactionDark, alt: "ExpenseApp — Nova transação (despesa)" },
     ],
   },
   {
