@@ -164,7 +164,7 @@ export const projects: Project[] = [
       "Login com Google e E-mail/Senha (Firebase Auth)",
       "Testes de Flow com Turbine + MockK",
     ],
-    githubUrl: "https://github.com/IagoRochaDev/SavePoint-Android",
+    githubUrl: "https://github.com/IagoRochaDev/SavePoint-AppAndroid",
     accentColor: "265 85% 60%",
     features: [
       "Autenticação com Google e E-mail/Senha via Firebase Auth",
